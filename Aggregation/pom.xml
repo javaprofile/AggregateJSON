@@ -85,7 +85,7 @@
             </plugin>
             <plugin>
     <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-assembly-plugin</artifactId>
+    <artifactId>maven-jar-plugin</artifactId>
     <executions>
         <execution>
             <phase>package</phase>
@@ -96,10 +96,8 @@
                 <archive>
                 <manifest>
                 <addClasspath>true</addClasspath>
-           		 <classpathPrefix>lib/</classpathPrefix>
-                    <mainClass>
-                        com.aggregate.AggregationApp
-                    </mainClass>
+           		 <!--  classpathPrefix>lib/</classpathPrefix-->
+                <mainClass>com.aggregate.AggregationApp</mainClass>
                 </manifest>
                 </archive>
                 <descriptorRefs>
